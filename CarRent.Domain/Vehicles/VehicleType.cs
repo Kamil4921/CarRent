@@ -1,4 +1,4 @@
-namespace CarRent.Domain.Vehicle;
+namespace CarRent.Domain.Vehicles;
 
 public enum VehicleType
 {
