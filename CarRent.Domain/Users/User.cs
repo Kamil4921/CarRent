@@ -10,6 +10,7 @@ public sealed class User: AggregateRoot
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string PasswordHash { get; set; }
+    public bool Admin { get; set; }
 
     public ICollection<Reservation> Reservations { get; set; }
 }

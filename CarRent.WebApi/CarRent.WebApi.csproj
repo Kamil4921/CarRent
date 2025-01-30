@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>aspnet-CarRent-352ce090-9292-4377-a48a-6337076d20a5</UserSecretsId>
@@ -21,6 +21,7 @@
         <PackageReference Include="Microsoft.Identity.Web" Version="3.2.0"/>
         <PackageReference Include="Microsoft.Identity.Web.DownstreamApi" Version="3.2.0"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.2.0" />
     </ItemGroup>
 
     <ItemGroup>

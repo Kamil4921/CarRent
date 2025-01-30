@@ -4,7 +4,7 @@ using CarRent.Domain.Vehicles;
 
 namespace CarRent.Domain.Reservations;
 
-public class Reservation : AggregateRoot
+public sealed class Reservation : AggregateRoot
 {
     public Guid VehicleId { get; set; }
     public Vehicle Vehicle { get; set; }

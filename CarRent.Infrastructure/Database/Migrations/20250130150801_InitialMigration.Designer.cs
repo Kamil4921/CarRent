@@ -9,10 +9,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace CarRent.Infrastructure.Migrations
+namespace CarRent.Infrastructure.Database.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250129190254_InitialMigration")]
+    [Migration("20250130150801_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -44,9 +44,6 @@ namespace CarRent.Infrastructure.Migrations
                     b.Property<Guid>("VehicleId")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("Version")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
@@ -61,6 +58,9 @@ namespace CarRent.Infrastructure.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
+
+                    b.Property<bool>("Admin")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -81,9 +81,6 @@ namespace CarRent.Infrastructure.Migrations
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("text");
-
-                    b.Property<int>("Version")
-                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -112,9 +109,6 @@ namespace CarRent.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<int>("Type")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Version")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
